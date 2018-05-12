@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA3C1381-9A59-43D2-82A4-823569F964B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>media</RootNamespace>
+    <AssemblyName>media</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>G:\_EL\Document\data_el2\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_2_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>play.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>LIB\NAudio.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech">
+      <HintPath>LIB\System.Speech.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app.cs" />
+    <Compile Include="fBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IconLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kit\Fonts\IconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kit\Fonts\IconType.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\CssSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\ExtensionMethods.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\NodeExtensionMethods.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClass.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClassNameAttribute.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClassSelectors\FirstChildPseudoClass.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClassSelectors\LastChildPseudoClass.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClassSelectors\NotPseudoClass.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\PseudoClassSelectors\NthChildPseudoClass.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\AllSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\AttributeSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\ClassNameSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\IdSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\ImediateChildrenSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\PseudoClassSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\SiblingImediateSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\SiblingSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Selectors\TagNameSelector.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Token.cs" />
+    <Compile Include="Kit\HtmlAgilityPack.CssSelectors\Tokenizer.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\crc32.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\EncodingFoundException.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlAttribute.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlAttributeCollection.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlCmdLine.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlCommentNode.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlConsoleListener.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlDocument.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlDocument.PathMethods.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlDocument.Xpath.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlElementFlag.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlEntity.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNameTable.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNode.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNode.Encapsulator.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNode.Xpath.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNodeCollection.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNodeNavigator.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlNodeType.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlParseError.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlParseErrorCode.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlTextNode.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlWeb.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlWeb.Xpath.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\HtmlWebException.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\InvalidProgramException.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\IOLibrary.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\Metro\HtmlWeb.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\Metro\InvalidProgramException.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocument.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocumentFragment.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\NameValuePair.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\NameValuePairList.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\Trace.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\Trace.FullFramework.cs" />
+    <Compile Include="Kit\HtmlAgilityPack\Utilities.cs" />
+    <Compile Include="Kit\System\System.Linq\Class1.cs" />
+    <Compile Include="Kit\System\System.Linq\DeepCopy.Assign.cs" />
+    <Compile Include="Kit\System\System.Linq\IsNumber.cs" />
+    <Compile Include="Kit\System\System.Linq\Lucene.Net.cs" />
+    <Compile Include="Kit\System\System.Linq\ReaderWriterLockSlim.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Collections.Generic\HashSet.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Collections.Generic\ISet.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Data.Linq\MonoTODOAttribute.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Dynamic\System.Linq.Dynamic.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\BinaryExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ConditionalExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ConstantExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ElementInit.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\EmitContext.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\Expression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ExpressionPrinter.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ExpressionTransformer.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ExpressionType.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ExpressionVisitor.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\Expression_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\Extensions.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\InvocationExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\LambdaExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ListInitExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberAssignment.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberBinding.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberBindingType.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberInitExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberListBinding.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MemberMemberBinding.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\MethodCallExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\NewArrayExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\NewExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\ParameterExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\TypeBinaryExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Expressions\UnaryExpression.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq.Ext.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\Check.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\Enumerable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\Grouping.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IGrouping.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\ILookup_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IOrderedEnumerable_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IOrderedQueryable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IOrderedQueryable_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IQueryable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IQueryable_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\IQueryProvider.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\Lookup.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\OrderedEnumerable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\OrderedSequence.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\Queryable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\QueryableEnumerable.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\QueryableTransformer.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\QuickSort.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\SortContext.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\SortDirection.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Linq\SortSequenceContext.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Runtime.CompilerServices\DynamicAttribute.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Runtime.CompilerServices\ExecutionScope.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Runtime.CompilerServices\ExtensionAttribute.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Runtime.CompilerServices\IStrongBox.cs" />
+    <Compile Include="Kit\System\System.Linq\System.Runtime.CompilerServices\StrongBox_T.cs" />
+    <Compile Include="Kit\System\System.Linq\System\Action.cs" />
+    <Compile Include="Kit\System\System.Linq\System\Func.cs" />
+    <Compile Include="Kit\System\System.Linq\Tuple\IStructuralComparable.cs" />
+    <Compile Include="Kit\System\System.Linq\Tuple\IStructuralEquatable.cs" />
+    <Compile Include="Kit\System\System.Linq\Tuple\Tuple.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\AuthenticationType.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\ContentGrant.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\ContentRight.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\ContentUser.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\CryptoProvider.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\LocalizedNameDescriptionPair.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\PublishLicense.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\RightsManagementException.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\RightsManagementFailureCode.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\SecureEnvironment.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\UnsignedPublishLicense.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\UseLicense.cs" />
+    <Compile Include="Kit\System\System.Security.RightsManagement\UserActivationMode.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\Extensions.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\LoadOptions.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\SaveOptions.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XAttribute.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XCData.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XComment.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XContainer.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XDeclaration.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XDocument.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XDocumentType.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XElement.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XIterators.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XName.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNamespace.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNode.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNodeDocumentOrderComparer.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNodeEqualityComparer.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNodeNavigator.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNodeReader.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XNodeWriter.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XObject.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XObjectChange.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XObjectChangeEventArgs.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XProcessingInstruction.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XStreamingElement.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XText.cs" />
+    <Compile Include="Kit\System\System.Xml.Linq\System.Xml.Linq\XUtil.cs" />
+    <Compile Include="Kit\TabStrip\BaseClasses\BaseStyledPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kit\TabStrip\Control\FATabStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kit\TabStrip\Control\FATabStripCloseButton.cs" />
+    <Compile Include="Kit\TabStrip\Control\FATabStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kit\TabStrip\Control\FATabStripItemCollection.cs" />
+    <Compile Include="Kit\TabStrip\Control\FATabStripMenuGlyph.cs" />
+    <Compile Include="Kit\TabStrip\Delegates.cs" />
+    <Compile Include="Kit\TabStrip\Design\FATabStripDesigner.cs" />
+    <Compile Include="Kit\TabStrip\Design\FATabStripItemDesigner.cs" />
+    <Compile Include="Kit\TabStrip\Design\ICaptionSupport.cs" />
+    <Compile Include="Kit\TabStrip\Enums.cs" />
+    <Compile Include="Kit\TabStrip\Helpers\CollectionWithEvents.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Kit\_CONST.cs" />
+    <Compile Include="TranspCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LIB\NAudio.dll" />
+    <EmbeddedResource Include="LIB\System.Speech.dll" />
+    <None Include="bg.jpg" />
+    <Content Include="play.ico" />
+    <None Include="LIB\Linearicons-Free.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Kit\HtmlAgilityPack.CssSelectors\README.md" />
+    <None Include="Kit\System\System.Xml.Linq\System.Xml.Linq\ChangeLog" />
+    <None Include="LIB\fontawesome-webfont.ttf" />
+    <None Include="LIB\ionicons.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kit\System\System.Linq\_demo\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
